@@ -1,0 +1,25 @@
+.login
+  position: fixed
+  height: 100vh
+  transition: top 
+  transition-duration: 500ms
+  transition-timing-function: ease-in
+  z-index: 1000
+
+  &.login-hidden
+    top: -100vh
+
+  &.login-visible
+    top: 0vh
+
+  & > div
+    opacity: 0
+    animation: fade-text-in 1s ease-in
+    animation-fill-mode: forwards
+
+@keyframes fade-text-in
+  0%
+    opacity: 0
+
+  100%
+    opacity: 1

@@ -1,0 +1,43 @@
+.DocBook
+  scroll-behavior: smooth
+  width: 60vw
+  margin: auto
+
+  *
+    box-sizing: border-box
+
+  &.uriElement
+    font-family: monospace
+
+  &.listing
+    width: 45vw
+
+  p
+    width: 45vw
+
+  [contenteditable]
+    outline: none
+
+.SideBar
+  position: fixed
+  top: 0
+  right: 0
+  width: 24vw
+  height: calc(100vh - 4em)
+  background-color: white
+  z-index: 0
+  
+  *
+    box-sizing: border-box
+
+  .Elements
+    display: grid
+    grid-template-columns: repeat(3, 8vw)
+    overflow-y:  auto
+    overflow-x: hidden
+    height: calc(50vh - 4em)
+
+  .Attributes
+    overflow-y:  auto
+    overflow-x: hidden
+    height: calc(50vh - 4em)

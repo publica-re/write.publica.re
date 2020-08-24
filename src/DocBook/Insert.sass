@@ -1,0 +1,24 @@
+.insert-tool
+  display: inherit
+
+  &:focus-within
+    &::before, &::after
+      background-color: white
+
+    &::before
+      float: left
+      display: inline-block
+      margin-left: -5vw
+      content: attr(data-node)
+      border-left: solid 1px lightgrey
+      border-top-right-radius: 100%
+      border-bottom-right-radius: 100%
+      padding: .1em .5em .1em .2em
+      
+    &::after
+      float: right
+      content: attr(data-node)
+      border-right: solid 1px lightgrey
+      border-top-left-radius: 100%
+      border-bottom-left-radius: 100%
+      padding: .1em .2em .1em .5em

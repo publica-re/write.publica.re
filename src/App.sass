@@ -1,0 +1,24 @@
+* 
+  box-sizing: border-box
+  
+h1.principal.dark
+  margin-block-start: 0
+  margin-block-end: 0
+  background: rgb(49,201,232)
+  background: linear-gradient(98deg, rgba(49,201,232,1) 0%, rgba(220,255,249,1) 25%, rgba(5,171,152,1) 50%, rgba(228,255,252,1) 51%, rgba(5,171,152,1) 96%)
+  background-size: 400% 100%
+  background-clip: text
+  color: transparent
+  font-size: 4em
+  animation: title-move 10s ease-in-out 5s infinite
+  animation-fill-mode: forwards
+
+@keyframes title-move
+  0%
+    background-position: 100% 50%
+
+  50%
+    background-position: 0% 50%
+
+  100%
+    background-position: 100% 50%
