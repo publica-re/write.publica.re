@@ -55,22 +55,22 @@ class Project extends React.Component<ProjectProps, ProjectState> {
           user={user}
           project={project}
           api={api}
-          {<Transformer.ApplyTemplates {...this.ctx} />{ location, history, match }}
+          {...{ location, history, match }}
         />
         {projectData !== undefined && (
           <Switch>
             <Route
               path={`${url}/edit`}
               component={(props: EditProps) => (
-                <Edit {<Transformer.ApplyTemplates {...this.ctx} />this.props} {<Transformer.ApplyTemplates {...this.ctx} />props} projectData={projectData} />
+                <Edit {...this.props} {...props} projectData={projectData} />
               )}
             />
             <Route
               path={`${url}/settings`}
               component={(props: SettingsProps) => (
                 <Settings
-                  {<Transformer.ApplyTemplates {...this.ctx} />this.props}
-                  {<Transformer.ApplyTemplates {...this.ctx} />props}
+                  {...this.props}
+                  {...props}
                   projectData={projectData}
                 />
               )}

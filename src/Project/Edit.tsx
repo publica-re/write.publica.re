@@ -55,13 +55,13 @@ class Edit extends React.Component<EditProps, EditState> {
             <Route
               path={`${this.props.match.url}/:path+`}
               component={(props: EditorProps) => (
-                <Editor {<Transformer.ApplyTemplates {...this.ctx} />props} onEdit={this.onEdit} />
+                <Editor {...props} onEdit={this.onEdit} />
               )}
             />
             <Route
               path={`${this.props.match.url}/`}
               component={(props: EditorProps) => (
-                <Editor {<Transformer.ApplyTemplates {...this.ctx} />props} onEdit={this.onEdit} />
+                <Editor {...props} onEdit={this.onEdit} />
               )}
             />
           </Switch>
